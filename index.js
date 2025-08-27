@@ -32,23 +32,56 @@ for(let button of callButtons){
 }
 
 
-const data = []
+let data = []
 
 
 
 getById('btn-call-energency').addEventListener('click',function(){
+      let availavalCoin = parseInt(getById('coin-count').innerText)
+    if(availavalCoin <= 0){
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
+        return
+    }
     const nameNum = {
         name:'National Emergency Number',
         Number:999,
     }
+    
    data.push(nameNum)
-    console.log(data)
+     for(let val of data){
+        
+        alert(`Calling ${val.name} ${val.Number}`)
+        let availavalCoin = parseInt(getById('coin-count').innerText)
+        let update = availavalCoin - 20;
+        getById('coin-count').innerText = update
+
+        // console.log(val)
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+          <div>
+            <h2 class="font-bold"> ${val.name} </h2>
+            <p>${val.Number}</p>
+          </div>
+
+          <p>${new Date().toLocaleTimeString()}</p>
+        </div>
+        `
+
+        let callHistoryCard = document.getElementById('call-history-card')
+        callHistoryCard.appendChild(div)
+        
+        data.shift()
+
+        return
+    }
    
 })
 getById('btn-call-police').addEventListener('click',function(){
+    
     let availavalCoin = parseInt(getById('coin-count').innerText)
     if(availavalCoin <= 0){
-        alert('you dont have coin')
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
         return
     }
     const nameNum = {
@@ -57,12 +90,50 @@ getById('btn-call-police').addEventListener('click',function(){
     }
     data.push(nameNum)
     for(let val of data){
-        alert(`calling ${val.name} number is ${val.Number}`)
+        alert(`Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        console.log(val)
+        // console.log(val)
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+          <div>
+            <h2 class="font-bold"> ${val.name} </h2>
+            <p>${val.Number}</p>
+          </div>
+
+          <p>${new Date().toLocaleTimeString()}</p>
+        </div>
+        `
+
+        let callHistoryCard = document.getElementById('call-history-card')
+        callHistoryCard.appendChild(div)
+         data.shift()
+        return
+    }
+
+
+})
+getById('btn-call-fire-ser').addEventListener('click',function(){
+      let availavalCoin = parseInt(getById('coin-count').innerText)
+    if(availavalCoin <= 0){
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
+        return
+    }
+    const nameNum = {
+        name:'Fire Service Number',
+        Number:999,
+    }
+    data.push(nameNum)
+    for(let val of data){
+        alert(`Calling ${val.name} ${val.Number}`)
+        let availavalCoin = parseInt(getById('coin-count').innerText)
+        let update = availavalCoin - 20;
+        getById('coin-count').innerText = update
+
+        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -78,41 +149,131 @@ getById('btn-call-police').addEventListener('click',function(){
         let callHistoryCard = document.getElementById('call-history-card')
         callHistoryCard.appendChild(div)
 
+        data.shift()
         return
     }
-
-
-})
-getById('btn-call-fire-ser').addEventListener('click',function(){
-    const nameNum = {
-        name:'Fire Service Number',
-        Number:999,
-    }
-    data.push(nameNum)
-    console.log(data)
 })
 getById('btn-call-ambulance').addEventListener('click',function(){
+      let availavalCoin = parseInt(getById('coin-count').innerText)
+    if(availavalCoin <= 0){
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
+        return
+    }
      const nameNum = {
         name:'Ambulance Service',
-        Number:1994-999999,
+        Number:'1994-999999',
     }
     data.push(nameNum)
-    console.log(data)
+     for(let val of data){
+        alert(`Calling ${val.name} ${val.Number}`)
+        let availavalCoin = parseInt(getById('coin-count').innerText)
+        let update = availavalCoin - 20;
+        getById('coin-count').innerText = update
+
+        // console.log(val)
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+          <div>
+            <h2 class="font-bold"> ${val.name} </h2>
+            <p>${val.Number}</p>
+          </div>
+
+          <p>${new Date().toLocaleTimeString()}</p>
+        </div>
+        `
+
+        let callHistoryCard = document.getElementById('call-history-card')
+        callHistoryCard.appendChild(div)
+
+        data.shift()
+        return
+    }
 })
 getById('btn-call-brac-help').addEventListener('click',function(){
+      let availavalCoin = parseInt(getById('coin-count').innerText)
+    if(availavalCoin <= 0){
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
+        return
+    }
      const nameNum = {
         name:'Brac Helpline',
         Number:16445,
     }
     data.push(nameNum)
-    console.log(data)
+     for(let val of data){
+        alert(`Calling ${val.name} ${val.Number}`)
+        let availavalCoin = parseInt(getById('coin-count').innerText)
+        let update = availavalCoin - 20;
+        getById('coin-count').innerText = update
+
+        // console.log(val)
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+          <div>
+            <h2 class="font-bold"> ${val.name} </h2>
+            <p>${val.Number}</p>
+          </div>
+
+          <p>${new Date().toLocaleTimeString()}</p>
+        </div>
+        `
+
+        let callHistoryCard = document.getElementById('call-history-card')
+        callHistoryCard.appendChild(div)
+
+        data.shift()
+        return
+    }
 })
 getById('btn-call-BD-railway').addEventListener('click',function(){
+      let availavalCoin = parseInt(getById('coin-count').innerText)
+    if(availavalCoin <= 0){
+        alert("❌You don't have enough coins.You will need at least 20 coins to make the call.")
+        return
+    }
+
     const nameNum = {
         name:'Bangladesh Railway Helpline',
         Number:163,
     }
     data.push(nameNum)
-    console.log(data)
+     for(let val of data){
+        alert(`Calling ${val.name} ${val.Number}`)
+        let availavalCoin = parseInt(getById('coin-count').innerText)
+        let update = availavalCoin - 20;
+        getById('coin-count').innerText = update
+
+        // console.log(val)
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+          <div>
+            <h2 class="font-bold"> ${val.name} </h2>
+            <p>${val.Number}</p>
+          </div>
+
+          <p>${new Date().toLocaleTimeString()}</p>
+        </div>
+        `
+
+        let callHistoryCard = document.getElementById('call-history-card')
+        callHistoryCard.appendChild(div)
+
+        data.shift()
+        return
+    }
 
 })
+
+
+
+// clear button functionality 
+getById('btn-clear').addEventListener('click',
+    function(){
+        console.log('clear btn working')
+
+        getById('call-history-card').innerHTML = ''
+    }
+)
