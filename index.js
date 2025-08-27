@@ -7,7 +7,6 @@ function getById (id){
 
 // heart count section 
 const heartButtons = document.getElementsByClassName('btn-heart')
-// console.log(heartButtons)
 
 for(let heartButton of heartButtons){
     heartButton.addEventListener('click',function () {
@@ -21,15 +20,12 @@ for(let heartButton of heartButtons){
 
 
 // call button functionality 
-const callButtons = document.getElementsByClassName('btn-call')
-// console.log(callButtons)
-
-for(let button of callButtons){
-    button.addEventListener('click',function(){
-        console.log(button)
-       
-    })
-}
+// const callButtons = document.getElementsByClassName('btn-call')
+// for(let button of callButtons){
+//     button.addEventListener('click',function(){
+//         console.log(button)   
+//     })
+// }
 
 
 let data = []
@@ -55,7 +51,6 @@ getById('btn-call-energency').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -95,7 +90,6 @@ getById('btn-call-police').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -133,7 +127,6 @@ getById('btn-call-fire-ser').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -170,7 +163,6 @@ getById('btn-call-ambulance').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -207,7 +199,6 @@ getById('btn-call-brac-help').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
@@ -245,7 +236,6 @@ getById('btn-call-BD-railway').addEventListener('click',function(){
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
-        // console.log(val)
         const div = document.createElement('div')
         div.innerHTML = `
         <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
