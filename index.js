@@ -290,10 +290,6 @@ for(let button of copyButtons){
     // to alert 
     alert('The number has been copied: '+text)
 
-
-    
-
   })
 }
-
 
