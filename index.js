@@ -46,14 +46,14 @@ getById('btn-call-energency').addEventListener('click',function(){
    data.push(nameNum)
      for(let val of data){
         
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -85,14 +85,14 @@ getById('btn-call-police').addEventListener('click',function(){
     }
     data.push(nameNum)
     for(let val of data){
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -122,14 +122,14 @@ getById('btn-call-fire-ser').addEventListener('click',function(){
     }
     data.push(nameNum)
     for(let val of data){
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -158,14 +158,14 @@ getById('btn-call-ambulance').addEventListener('click',function(){
     }
     data.push(nameNum)
      for(let val of data){
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -194,14 +194,14 @@ getById('btn-call-brac-help').addEventListener('click',function(){
     }
     data.push(nameNum)
      for(let val of data){
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -231,14 +231,15 @@ getById('btn-call-BD-railway').addEventListener('click',function(){
     }
     data.push(nameNum)
      for(let val of data){
-        alert(`Calling ${val.name} ${val.Number}`)
+        alert(`📞Calling ${val.name} ${val.Number}`)
         let availavalCoin = parseInt(getById('coin-count').innerText)
         let update = availavalCoin - 20;
         getById('coin-count').innerText = update
 
         const div = document.createElement('div')
+       
         div.innerHTML = `
-        <div class="flex justify-between items-center p-3 bg-[#fafafa] rounded-lg ">
+        <div class="flex justify-between items-center mb-2 p-3 bg-[#fafafa] rounded-lg ">
           <div>
             <h2 class="font-bold"> ${val.name} </h2>
             <p>${val.Number}</p>
@@ -250,6 +251,8 @@ getById('btn-call-BD-railway').addEventListener('click',function(){
 
         let callHistoryCard = document.getElementById('call-history-card')
         callHistoryCard.appendChild(div)
+
+        
 
         data.shift()
         return
@@ -269,7 +272,7 @@ getById('btn-clear').addEventListener('click',
 )
 
 
-// Copy button functionality 
+// Copy count functionality 
 const copyButtons = document.getElementsByClassName('copy-buttons')
 
 for(let button of copyButtons){
@@ -278,5 +281,19 @@ for(let button of copyButtons){
     let copyCountNumber = parseInt(copyCount)
     let update = copyCountNumber + 1;
     document.getElementById('count-copy').innerText = update
+
+    // To copy number
+    let cards = button.closest('.cards')
+    const text = cards.querySelector('.copy-number').innerText
+    navigator.clipboard.writeText(text)
+    
+    // to alert 
+    alert('The number has been copied: '+text)
+
+
+    
+
   })
 }
+
+
