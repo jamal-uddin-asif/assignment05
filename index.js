@@ -267,3 +267,16 @@ getById('btn-clear').addEventListener('click',
         getById('call-history-card').innerHTML = ''
     }
 )
+
+
+// Copy button functionality 
+const copyButtons = document.getElementsByClassName('copy-buttons')
+
+for(let button of copyButtons){
+  button.addEventListener('click',function(){
+    let copyCount = getById('count-copy').innerText
+    let copyCountNumber = parseInt(copyCount)
+    let update = copyCountNumber + 1;
+    document.getElementById('count-copy').innerText = update
+  })
+}
